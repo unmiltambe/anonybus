@@ -18,6 +18,7 @@ const products = {
     'PRICE': 49.99,
     'RATING': 5,
     'SPOKEN_NAME': 'echo dot',
+    'FEATURES': ['WALKIE_TALKIE', 'HANDS_FREE', 'BLUETOOTH'],
     'DETAILS': [
         "Echo Dot is a hands-free, voice-controlled device that uses Alexa to play music, control smart home devices, make calls, send and receive messages, provide information, read the news, set music alarms, read audiobooks from Audible, control Amazon Video on Fire TV, and more",
         "Echo Dot connects to speakers or headphones through Bluetooth or 3.5 mm stereo cable to play music from Amazon Music, Spotify, Pandora, iHeartRadio, and TuneIn. Play music simultaneously across Echo devices and speakers connected via cable with multi-room music.",
@@ -25,7 +26,7 @@ const products = {
         "Echo Dot controls lights, fans, TVs, switches, thermostats, garage doors, sprinklers, locks, and more with compatible connected devices from WeMo, Philips Hue, Sony, Samsung SmartThings, Nest, and others",
         "Echo Dot hears you from across the room with 7 far-field microphones for hands-free control, even in noisy environments or while playing music",
         "Echo Dot includes a built-in speaker so it can work on its own as a smart alarm clock in the bedroom, an assistant in the kitchen, or anywhere you might want a voice-controlled computer; Amazon Echo is not required to use Echo Dot",
-        "Always getting smarter and adding new features, plus thousands of skills like Uber, Domino's, DISH, and more"
+        "Echo Dot is always getting smarter and adding new features, plus thousands of skills like Uber, Domino's, DISH, and more"
     ],
     'CUSTOMERQAS':[{
         'QUESTION':"What is the difference between dot and echo",
@@ -37,19 +38,23 @@ const products = {
         'QUESTION':"is echo dot going to finally kill me?",
         'ANSWER':"It depends on how much power you give Alexa. I highly recommend avoiding smart locks on the basement door."
     }],
+    "REVIEWS":[
+      "My brother Robert who has been bed ridden and paralyzed with Multiple Sclerosis from his neck down for more than 30 years now has a new friend named Alexa! He was in tears with happiness when Alexa played 70's music, played Jeopardy, answered all his questions and wakes him up every morning. Thank you Amazon for giving my brother a new bedside companion.",
+      "Having worked in the electronics retail industry for years now, I've seen scores of Smart devices come and go. Until now, nobody quite got it right. In the Echo Dot, Amazon has created a near perfect blend of hardware and software. I've seen plenty of the former, but truly seamless multi platform software has eluded everyone but Amazon. We're talking major players like Samsung and Google who have been at it for much longer than Amazon. The main problem is that excellent products like the Samsung Smart Things hub, which do a fantastic job of unifying a slew of different connected devices from different companies (Nest, Honeywell, Phillips, and so on), still lacked the web connectivity and entertainment support I wanted, so I'd still end up needing my tablet or phone. Thanks to fantastic third party support, the Dot has no problem controlling all of my smart stuff while allowing me to listen to music, order food, check the weather, listen to the radio, set alarms and timers, all of which is easily accomplished through simple voice commands. To me, this is the exceedingly rare product that I didn't know I needed, and now can't live without. Similar to the smartphone and tablet I use every day that didn't exist just a few short years ago."
+    ]
   }, 
   'ECHO_SHOW': {
     'COLORS': ['black'],
     'PRICE': 229.99,
     'RATING': 4,
-    'FEATURES': ['BABY_MONITOR'],
+    'FEATURES': ['WALKIE_TALKIE', 'HANDS_FREE', 'BLUETOOTH'],
     'SPOKEN_NAME': 'echo show',
     'DETAILS': [
         "Echo Show brings you everything you love about Alexa, and now she can show you things. Watch video flash briefings, Amazon Video content, see music lyrics, security cameras, photos, weather forecasts, to-do and shopping lists, browse and listen to Audible audiobooks, and more. All hands-free—just ask.",
         "Call almost anyone hands-free, or make video calls to family and friends with an Echo Spot, Echo Show, or the Alexa App. Instantly connect to other Echo devices around your home.",
-        "See lyrics on-screen with Amazon Music. Just ask to play a song, artist or genre, and stream over Wi-Fi. Also, stream music on Pandora, Spotify, TuneIn, iHeartRadio, and more.",
+        "Echo Show displays lyrics on-screen with Amazon Music. Just ask to play a song, artist or genre, and stream over Wi-Fi. Also, stream music on Pandora, Spotify, TuneIn, iHeartRadio, and more.",
         "Echo Show has powerful, room-filling speakers with Dolby processing for crisp vocals and extended bass response. Play your music simultaneously across Echo devices with multi-room music (Bluetooth not supported).",
-        "Ask Alexa to show you the front door or monitor the baby's room with compatible cameras from Amazon and others. Turn on lights or the TV, set thermostats, control Amazon Video on Fire TV, and more with WeMo, Philips Hue, Sony, ecobee, and other compatible smart home devices.",
+        "Ask Alexa on the Echo Show to show you the front door or monitor the baby's room with compatible cameras from Amazon and others. Turn on lights or the TV, set thermostats, control Amazon Video on Fire TV, and more with WeMo, Philips Hue, Sony, ecobee, and other compatible smart home devices.",
         "With eight microphones, beam-forming technology, and noise cancellation, Echo Show hears you from any direction—even while music is playing",
         "Echo Show is always getting smarter and adding new features, plus thousands of skills like Uber, Allrecipes, CNN, and more"
     ],
@@ -66,6 +71,10 @@ const products = {
          'QUESTION':"is echo show going to finally kill me?",
          'ANSWER':"It depends on how much power you give Alexa. I highly recommend avoiding smart locks on the basement door."
      }],
+    "REVIEWS":[
+      "I know that many media folks have stated that the \"Drop-in\" feature of the Echos is \"creepy\" and can see their point. Here's a different perspective. Mom is now almost 95 and she has short term memory dementia, she's in great spirits but I really can't teach her anything technical, like dialing a phone or even pressing a memory dial button. She lives near my sister and is 2 hours away so visiting is always a bit of a project. I thought I'd try setting a Show next to her rocking chair. I can now \"Drop-in\" on her every day and share some face time with her, visit with her grand daughter, see the dog whom she LOVES, and just make her smile. The beauty is that there is no interaction needed on her end, the Caregivers and my Mom love this setup. The fact that I can use my phone from anywhere and actually see and talk to Mom, and show her things is hugely entertaining and comforting for Mom, and everyone in the family. So I say with extreme gratitude, Thank You Amazon for creating an amazingly personally helpful tool for the elderly. The only bug I have at the moment, \"Alexa, turn off the screen\", the screen turns off, then immediately turns back on. Tell her again and the screen stays off, pretty consistent bug. Edit- Seems fixed now! 1/06/2018 Still enjoying my Echo Shows very much, I don't expect this to replace a tablet, it does many things very well, besides being indispensable with visiting Mom. Currently there is one in the Kitchen and it is used by the family to play lots of music, having the screen is really nice to be able to see what's playing etc. We are trying Amazon Music and so far it's pretty sweet as well, \"Alexa show me all albums from Keith Urban\", up comes pictures of all of his 12 or so album covers, touch one and play the album. Alexa, \"Connect Bluetooth\" and the Show connects to a Bluetooth receiver I have on our whole house stereo. Alexa \"Turn on the Stereo\", Alexa controls the Logitech Harmony remote to power up the stereo and now we are hearing music everywhere, nice. We've also added some Ring cameras and doorbell, \"Alexa, show me the front door\", now I'm looking out front. Oh, and our doggie monitor/treat shooter, Furbo, \"Alexa, ask Furbo to toss a treat\" is our dog \"Cookie\" 's favorite skill! Bottom line, this is a very powerful system, don't get me wrong we love our Apple products (Phones, iPads, and Macs) but I prefer this Amazon ecosystem for my home music, automation, and general questions etc. as it's a fairly open system that plays well with 3rd parties when compared to the likes of Apple. I would never have imagined all that is possible with these units!",
+      "So first off, let me start by saying, my family and I are all Apple everything. MacBook’s, Apple TVs, Watches, all iPhones, etc. You name it. We use it. But once I saw that the Echo Show had a screen I was so GAME, this was also after the HomePod from Apple was released (no screen). I wanted to try it out so badly, I have a few regular speakers but never bought a home smart speaker before, so this was entirely and completely new for me, and let me tell you, so far so GOOD. Just like Apple, the packaging was very nice, lots to open and unwrap, all clean and dust free. The set up was okay, it took a while but my Wi-Fi is not the best so It could have just been personal reasons. And once it turned on I was like, “uhhhh what do I do now”. It was just a screen and nothing really happened besides a little video beforehand on what it can do. I started to ask it questions and downloaded different skills and what not and it became easier to use. The quality of the audio is amazing, it gets very loud stays very clear. The 7in screen is also very high definition, as well as the 5MP front camera. I then downloaded the Alexa app and video chatted some people which was so awesome to do so in the kitchen as I was just cooking and cleaning, etc. It felt very futuristic. Now if you’re looking for something mind-blowing and life changing this is not for you. This is a massive step for the Echo devices and I am very happy to own one. It’s enjoyable and easy to use. The more skills you download the more I found out it can do so much more than I really thought. I like the news apps and the sound making apps. Aesthetically speaking it looks so sweet, clean and futuristic just sitting in my kitchen with the home screen always on and ready to be talked to. And I probably love that the most. Just a little \"smart-home-TV-speaker\" just chilling in my kitchen. This device and future ones have so much potential in the home and can really change the way we live. I really enjoy being an early adopter of technology to see which direction we are headed in and this is a great start. Amazon is seriously killing the game and I am so excited for their future! Another PLEASED customer!!"
+    ]     
   },
   'KIND_BAR': {
     'FLAVORS': ['dark chocolate nuts and sea salt'],
@@ -91,6 +100,10 @@ const products = {
         'QUESTION':"Do they curb appetite?",
         'ANSWER': "i use this as a dessert, not a meal, and yes they are satisfying"
     }],
+    "REVIEWS": [
+        "I eat these when I am craving something in the mid morning. They taste great and fill me up. I also take by Biotek Nutrition – Weight Loss Aid Diet Pill Blocks the Absorption of Carbs and Fats because this carb blocker will allow me to cheat now and then without feeling super guilty. I find that allows me to stay on track with my diet.",
+        "I came across these bars while at Starbucks and decided to give one a try.They were amazing! They can serve as a total meal replacement or a simple snack. Most healthy snack bars have either an unappetizing or bland flavor.KIND bars are different from the rest these taste nutty and chocolatey. Its made of cranberries and cherries with whole cashews and almonds nuts all of which I love!I also take a Natural Carb Blocker as part of my diet. It helps control my cravings and maintain a low calorie diet. As a meal replacement the Dark Chocolate and Nuts flavour is better as it has only 5g of sugar so if you are a on a low calorie diet go for that flavour. However, these taste better and are good for the occasional snack. All KIND bars have a lot of fiber so it will keep your digestive system smooth. Moreover, these are Gluten-Free(If you have a gluten allergy) and Non-GMO unlike many other bars. Overall, a great healthy choice."
+    ]
   },
   'SUPER_MARIO_ODYSSEY': {
     'AGE_RESTRICT': 10,
@@ -110,6 +123,10 @@ const products = {
         'QUESTION':"Is there any perk included in the preorder?",
         'ANSWER': "It is discounted for Prime members"
     }],
+    "REVIEWS": [
+        "My review is from the \"father of a toddler\" perspective. For those of you who have a child on the younger side, and you still enjoy Mario, don't hesitate to buy this game! My son can sit and watch this as if it is a cartoon and remains entertained the entire time. Sometimes he will say \"make Mario do this\" and is excited when it happens on screen. As someone who is a bit older but still enjoys games, it is a treat to find a game that entertains my son while I play.",
+        "Honestly this is my favorite console title to date. Very few games make me want to sit and play for hours on end. Even with Breath of the Wild, I haven't beaten it and can't get myself to play for extended periods of time. But this game is glorious. I'll leave this review spoiler free for the sake of those looking into purchasing this awesome title. It took me about 4 days to beat the main story. This included getting 8 hours of sleep and a work/school schedule. But that was using all of my free time playing this fantastic game. And even after that, there is still a LOT to do after the main story, so I've been playing it still. This is a console quality mario game. In my opinion it's the best 3d open-world mario title to date. Mario 64 will always have that nostaliga spot for me, but this is the new winner in my eyes. Not only because of the gameplay, but with the nature of the switch it's also a portable title. I played this while waiting at campus for a class to start. Almost was late to class because I lost track of time. And the mechanics are great. Even after beating the main story, I find myself learning new advanced moves that make previously tall walls easy to get over. The music is also good. Not all of it is super memorable, but there are several songs in there that I would pay to have downloaded on my phone. I highly recommend anyone who is even remotely considering this game to pick it up. I wasn't even super excited to get it, but decided to give it a go and now it's my new gaming addiction."
+    ]
   }
 };
 
@@ -126,6 +143,13 @@ const customerQA = {
 const differenceQA = {
     "ECHO ECHO_DOT": "The Echo has speakers suitable for listening to music on, while the Echo Dot has a speaker that is only good enough for the commands and alarms. If you want to listen to music with the Dot, you'll want to connect speakers to it.",
     "FIRSTGEN SECONDGEN": "Changes from first gen I have been able to identify: The new dot is smaller. Same 3.3\" diameter but is 1.3\" tall vs 1.5\" tall Directional mic holes are slashes instead of tiny circles Volume buttons replaced the volume slider around the top 5.7 oz vs 8.8 oz so slightly lighter likely due to smaller height Comes with 90 day warranty vs first gen had 1 year No more power indicator light on the back Both have a 7-microphone array so at least they didn't change that Side material appears to have a glossy finish now No longer includes the 3.5 mm audio cable (4 ft.)",
+}
+
+const killMeQA = {
+    'ECHO_DOT': 'No, but my humor might',
+    'ECHO_SHOW': 'No, but my humor might',
+    'KIND_BAR': "On the contrary, you won't starve to death",
+    'SUPER_MARIO_ODYSSEY': 'Not if you eat your magic mushrooms',
 }
 
 // --------------- Helpers that build all of the responses -----------------------
@@ -177,7 +201,7 @@ function getWelcomeResponse(callback) {
     // If we wanted to initialize the session to have some attributes we could add those here.
     const sessionAttributes = {};
     const cardTitle = 'Welcome';
-    const speechOutput = 'Welcome to the Alexa Shopping App. ' +
+    const speechOutput = 'Welcome to Anonybus. ' +
         'Please ask me a question you have about any Amazon product.';
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
@@ -388,24 +412,46 @@ function handleAgeRestrictionIntent(intent, session, callback) {
     let repromptText = "Please ask a question.";
     let speechOutput = "I'm not sure what you are asking for.";
     
-    if (ageSlot && ageSlot.value) {
+     if (productSlot) {
         const productId = getResolutionIdFromSlot(productSlot);
         const actionName = getResolutionNameFromSlot(actionSlot);
         const personName = getResolutionNameFromSlot(personSlot);
         const minAge = get([productId, 'AGE_RESTRICT'], products) || 0;
         const productName = get([productId, 'SPOKEN_NAME'], products);
-        if (ageSlot.value >= minAge) {
-            speechOutput = `Your ${personName} is old enough to ${actionName} ${productName}.`;
+        if (minAge == 0) {
+            speechOutput = `there is no age restriction for ${productName}`;
         } else {
-            speechOutput = `Your ${personName} is not old enough to ${actionName} ${productName}.`;
+            speechOutput = `${productName} is recommended for ages ${minAge} and above`;
         }
-    } else if (actionSlot && productSlot && personSlot) {
-        callback(sessionAttributes,
-            buildDelegateDirectiveSpeechletResponse());
-        return;
     }
     
     callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));    
+}
+
+function handleGetReviewsIntent(intent, session, callback) {
+    const cardTitle = intent.name;
+    let sessionAttributes = {};
+    
+    const productSlot = intent.slots.Product;
+    let repromptText = "Please ask a question.";
+    let speechOutput = 'I did not find any reviews for the product.';
+
+    if (productSlot) {
+        const productId = getResolutionIdFromSlot(productSlot);
+        const productName = getResolutionNameFromSlot(productSlot);
+        let productReviews = get([productId, 'REVIEWS'], products)
+
+        if (productReviews) {
+            
+            // Randomize the list
+            productReviews = productReviews.sort((a,b) => 0.5-Math.random())
+            
+            speechOutput = "Here are some reviews for this product. One customer says, "
+            speechOutput += `${productReviews.join('. Another customer says, ')}.`;
+        }
+    }
+
+    callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));
 }
 
 function handleGetProductDetailsIntent(intent, session, callback) {
@@ -420,12 +466,32 @@ function handleGetProductDetailsIntent(intent, session, callback) {
         const productId = getResolutionIdFromSlot(productSlot);
         const productName = getResolutionNameFromSlot(productSlot);
         const productDetails = get([productId, 'DETAILS'], products)
-        speechOutput = `No ${productName} found available for ${productName}.`
-        
+
         if (productDetails) {
           speechOutput = `${productDetails.join(' ')}.`;
         } else {
           speechOutput = `I don't have information on ${productName}.`
+        }
+    }
+
+    callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));
+}
+
+function handleKillMeIntent(intent, session, callback) {
+    const cardTitle = intent.name;
+    let sessionAttributes = {};
+    const productSlot = intent.slots.Product;
+    let repromptText = "Please ask a question.";
+    let speechOutput = "";
+
+    if (productSlot) {
+        const productId = getResolutionIdFromSlot(productSlot);
+        const answer = killMeQA[productId];
+
+        if (answer) {
+            speechOutput = answer
+        } else {
+            speechOutput = "I'll let you be the judge of that"
         }
     }
 
@@ -475,6 +541,10 @@ function onIntent(intentRequest, session, callback) {
         handleAgeRestrictionIntent(intent, session, callback);
     } else if (intentName === "GetProductDetailsIntent") {
         handleGetProductDetailsIntent(intent, session, callback);
+    } else if (intentName === "GetReviewsIntent") {
+        handleGetReviewsIntent(intent, session, callback);
+    } else if (intentName === "KillMeIntent") {
+        handleKillMeIntent(intent, session, callback);
     } else if (intentName === 'AMAZON.FallbackIntent') {
         handleFallbackRequest(intent, session, callback);
     } else if (intentName === 'AMAZON.HelpIntent') {
@@ -611,4 +681,5 @@ function isStringInText(string, text) {
         return true;
     }
 }
+
 
