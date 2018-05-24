@@ -19,6 +19,7 @@ const products = {
     'RATING': 5,
     'SPOKEN_NAME': 'echo dot',
     'FEATURES': ['WALKIE_TALKIE', 'HANDS_FREE', 'BLUETOOTH'],
+    'IMAGE': 'https://images-na.ssl-images-amazon.com/images/I/61dFyj4ZXLL._SX679_.jpg',
     'DETAILS': [
         "Echo Dot is a hands-free, voice-controlled device that uses Alexa to play music, control smart home devices, make calls, send and receive messages, provide information, read the news, set music alarms, read audiobooks from Audible, control Amazon Video on Fire TV, and more",
         "Echo Dot connects to speakers or headphones through Bluetooth or 3.5 mm stereo cable to play music from Amazon Music, Spotify, Pandora, iHeartRadio, and TuneIn. Play music simultaneously across Echo devices and speakers connected via cable with multi-room music.",
@@ -47,7 +48,8 @@ const products = {
     'COLORS': ['black'],
     'PRICE': 229.99,
     'RATING': 4,
-    'FEATURES': ['WALKIE_TALKIE', 'HANDS_FREE', 'BLUETOOTH'],
+    'FEATURES': ['WALKIE_TALKIE', 'HANDS_FREE', 'BLUETOOTH', 'MONITOR'],
+    'IMAGE': 'https://images-na.ssl-images-amazon.com/images/I/61PTTzQ3aPL._SX679_.jpg',    
     'SPOKEN_NAME': 'echo show',
     'DETAILS': [
         "Echo Show brings you everything you love about Alexa, and now she can show you things. Watch video flash briefings, Amazon Video content, see music lyrics, security cameras, photos, weather forecasts, to-do and shopping lists, browse and listen to Audible audiobooks, and more. All hands-free—just ask.",
@@ -82,6 +84,7 @@ const products = {
     'RATING': 5,
     'SIZE': [12],
     'SPOKEN_NAME': 'kind bars',
+    'IMAGE': 'https://images-na.ssl-images-amazon.com/images/I/91qfuTTLL4L._SL1500_.jpg', 
     'DETAILS': [
         "Contains 12 - 1.4oz KIND Bars",
         "Our best-selling bar is a simple blend of Brazilian sea salt sprinkled over whole nuts and drizzled with dark chocolate.",
@@ -110,6 +113,7 @@ const products = {
     'PRICE': 48.75,
     'RATING': 5,
     'SPOKEN_NAME': 'super mario odyssey',
+    'IMAGE': 'https://images-na.ssl-images-amazon.com/images/I/51cE%2B9FaiWL.jpg', 
     'DETAILS': [
         "Explore huge 3D kingdoms filled with secrets and surprises, including costumes for Mario and lots of ways to interact with the diverse environments - such as cruising around them in vehicles that incorporate the HD Rumble feature of the Joy-Con controller or exploring sections as Pixel Mario.",
         "Thanks to his new friend, Cappy, Mario has brand-new moves for you to master, like cap throw, cap jump and capture. With capture, Mario can take control of all sorts of things, including objects and enemies!",
@@ -154,17 +158,13 @@ const killMeQA = {
 
 // --------------- Helpers that build all of the responses -----------------------
 
-function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
+function buildSpeechletResponse(card, output, repromptText, shouldEndSession) {
     return {
         outputSpeech: {
             type: 'PlainText',
             text: output,
         },
-        card: {
-            type: 'Simple',
-            title: `SessionSpeechlet - ${title}`,
-            content: `SessionSpeechlet - ${output}`,
-        },
+        card: card,
         reprompt: {
             outputSpeech: {
                 type: 'PlainText',
@@ -200,7 +200,7 @@ function buildDelegateDirectiveSpeechletResponse() {
 function getWelcomeResponse(callback) {
     // If we wanted to initialize the session to have some attributes we could add those here.
     const sessionAttributes = {};
-    const cardTitle = 'Welcome';
+    const cardTitle = 'Anonybus';
     const speechOutput = 'Welcome to Anonybus. ' +
         'Please ask me a question you have about any Amazon product.';
     // If the user either does not reply to the welcome message or says something that is not
@@ -209,25 +209,29 @@ function getWelcomeResponse(callback) {
         'what colors does echo dot come in?';
     const shouldEndSession = false;
 
+    const card = buildCard(cardTitle, speechOutput, '');
     callback(sessionAttributes,
-        buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+        buildSpeechletResponse(card, speechOutput, repromptText, shouldEndSession));
 }
 
 function handleSessionEndRequest(callback) {
-    const cardTitle = 'Session Ended';
+    const cardTitle = 'Anonybus';
     const speechOutput = 'Thank you for trying the Alexa Skills Kit sample. Have a nice day!';
     // Setting this to true ends the session and exits the skill.
     const shouldEndSession = true;
 
-    callback({}, buildSpeechletResponse(cardTitle, speechOutput, null, shouldEndSession));
+    const card = buildCard(cardTitle, speechOutput, '');
+    callback({}, buildSpeechletResponse(card, speechOutput, null, shouldEndSession));
 }
 
 /**
  * Get product attributes to answer customer question.
  */
 function handleGetProductAttributesIntent(intent, session, callback) {
-    const cardTitle = intent.name;
+    let cardTitle = 'Anonybus';
     let sessionAttributes = {};
+    let productImageUrl = ''
+    let productDetails = ''
     
     const productSlot = intent.slots.Product;
     const productAttributeSlot = intent.slots.ProductAttribute;
@@ -240,6 +244,9 @@ function handleGetProductAttributesIntent(intent, session, callback) {
         const productName = getResolutionNameFromSlot(productSlot);
         const attributeName = getResolutionNameFromSlot(productAttributeSlot);
         let attributeValues = get([productId, attributeId], products);
+        productImageUrl = get([productId, 'IMAGE'], products);
+        productDetails = get([productId, 'DETAILS'], products).join(', ');
+        cardTitle = productName;
         
         if (attributeValues) {
             if (!(attributeValues instanceof Array)) {
@@ -256,52 +263,57 @@ function handleGetProductAttributesIntent(intent, session, callback) {
         }
     }
 
-    callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));
+    const card = buildCard(cardTitle, productDetails, productImageUrl)
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
 }
 
 function handleCompareProductsInCategoryIntent(intent, session, callback) {
-    const cardTitle = intent.name;
+    let cardTitle = 'Anonybus';
     let sessionAttributes = {};
+    let productImageUrl = ''
+    let productDetails = ''
     
     const comparatorSlot = intent.slots.Comparator;
     const productCategorySlot = intent.slots.ProductCategory;
     let repromptText = "Please ask a question.";
     let speechOutput = "I don't support this comparison currently.";
-    let productName = '';
-    let comparatorName = '';
     
     if (comparatorSlot && productCategorySlot) {
         const comparatorId = getResolutionIdFromSlot(comparatorSlot);
         const categoryId = getResolutionIdFromSlot(productCategorySlot);
         const categoryName = getResolutionNameFromSlot(productCategorySlot);
-        comparatorName = getResolutionNameFromSlot(comparatorSlot);
+        let productId = ''
+
         if (comparatorId === 'CHEAPEST') {
-            const productId = productCategories[categoryId].reduce((p1, p2) => {
+            productId = productCategories[categoryId].reduce((p1, p2) => {
                 return products[p1]['PRICE'] < products[p2]['PRICE'] ? p1 : p2;
             });
-            productName = get([productId, 'SPOKEN_NAME'], products);
         } else if (comparatorId === 'MOST_EXPENSIVE') {
-            const productId = productCategories[categoryId].reduce((p1, p2) => {
+            productId = productCategories[categoryId].reduce((p1, p2) => {
                 return products[p1]['PRICE'] > products[p2]['PRICE'] ? p1 : p2;
             });
-            productName = get([productId, 'SPOKEN_NAME'], products);
         } else if (comparatorId === 'LOWEST_RATED') {
-            const productId = productCategories[categoryId].reduce((p1, p2) => {
+            productId = productCategories[categoryId].reduce((p1, p2) => {
                 return products[p1]['RATING'] < products[p2]['RATING'] ? p1 : p2;
             });
-            productName = get([productId, 'SPOKEN_NAME'], products);
         } else if (comparatorId === 'HIGHEST_RATED') {
-            const productId = productCategories[categoryId].reduce((p1, p2) => {
+            productId = productCategories[categoryId].reduce((p1, p2) => {
                 return products[p1]['RATING'] > products[p2]['RATING'] ? p1 : p2;
             });
-            productName = get([productId, 'SPOKEN_NAME'], products);
         }
         
-        if (productName && comparatorName) {
+        if (productId && comparatorId) {
+            const productName = get([productId, 'SPOKEN_NAME'], products);
+            const comparatorName = getResolutionNameFromSlot(comparatorSlot);
+            productImageUrl = get([productId, 'IMAGE'], products);
+            productDetails = get([productId, 'DETAILS'], products).join(', ');
+            cardTitle = productName;
             speechOutput = `The ${comparatorName} ${categoryName} is ${productName}.`
         }
     }
-    callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));
+
+    const card = buildCard(cardTitle, productDetails, productImageUrl)
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
 }
 
 // Example questions:
@@ -311,8 +323,10 @@ function handleCompareProductsInCategoryIntent(intent, session, callback) {
 // 3. Does Echo Dot have a smart home controller?
 // 4. Can Echo Dot control smart bulbs?
 function handleCanProductIntent(intent, session, callback) {
-    const cardTitle = intent.name;
+    let cardTitle = 'Anonybus';
     let sessionAttributes = {};
+    let productImageUrl = ''
+    let productDetails = ''
     
     const productSlot = intent.slots.Product;
     const productFeatureSlot = intent.slots.ProductFeature;
@@ -321,28 +335,29 @@ function handleCanProductIntent(intent, session, callback) {
     
     if (productSlot && productFeatureSlot) {
         const productId = getResolutionIdFromSlot(productSlot);
+        const productName = getResolutionNameFromSlot(productSlot);
         const featureId = getResolutionIdFromSlot(productFeatureSlot);
         const featureValue = getResolutionValueFromSlot(productFeatureSlot);
+        productImageUrl = get([productId, 'IMAGE'], products);
+        productDetails = get([productId, 'DETAILS'], products).join(', ');
+        cardTitle = productName;
 
         var productDetailsList = null;
         var productCustomerQAList = null;
         if (productId && (productId in products)) {
             productDetailsList = get([productId, 'DETAILS'], products);
 
-            console.log(productDetailsList)
             var featureDetails = null;
-            if (productDetailsList.length > 0) {
+            if (featureValue && productDetailsList.length > 0) {
                 featureDetails = findFeatureInDetails(featureValue, productDetailsList);
             }
-            console.log(featureDetails)
+
             
             productCustomerQAList = get([productId, 'CUSTOMERQAS'], products);
             var customerAnswer = null;
             if (productCustomerQAList.length > 0) {
                 customerAnswer = findFeatureInCustomerQuestions(featureValue, productCustomerQAList);
             }
-            console.log(productCustomerQAList)
-            console.log(customerAnswer)
 
             if (featureDetails) {
                 speechOutput = featureDetails;
@@ -357,11 +372,13 @@ function handleCanProductIntent(intent, session, callback) {
             speechOutput = "I don't recognize this product";
         }
     }
-    callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));
+
+    const card = buildCard(cardTitle, productDetails, productImageUrl)
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
 }
 
 function handleProductDifferenceIntent(intent, session, callback) {
-    const cardTitle = intent.name;
+    let cardTitle = 'Anonybus';
     let sessionAttributes = {};
     
     const productOneSlot = intent.slots.ProductOne;
@@ -378,11 +395,12 @@ function handleProductDifferenceIntent(intent, session, callback) {
 
     speechOutput = differenceQA[searchString1] || differenceQA[searchString2] || "I'm not sure what you are asking for.";
 
-    callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));
+    const card = buildCard(cardTitle, speechOutput, '')
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
 }
 
 function handleCustomerQAIntent(intent, session, callback) {
-    const cardTitle = intent.name;
+    let cardTitle = 'Anonybus';
     let sessionAttributes = {};
     
     const questionSlot = intent.slots.GenericQuestion;
@@ -398,12 +416,16 @@ function handleCustomerQAIntent(intent, session, callback) {
             speechOutput = "Sorry I don't know.";
         }
     }
-    callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));
+
+    const card = buildCard(cardTitle, speechOutput, '')
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
 }
 
 function handleAgeRestrictionIntent(intent, session, callback) {
-    const cardTitle = intent.name;
+    let cardTitle = 'Anonybus';
     let sessionAttributes = session.attributes || {};
+    let productImageUrl = ''
+    let productDetails = ''
     
     const actionSlot = intent.slots.Action;
     const productSlot = intent.slots.Product;
@@ -418,6 +440,10 @@ function handleAgeRestrictionIntent(intent, session, callback) {
         const personName = getResolutionNameFromSlot(personSlot);
         const minAge = get([productId, 'AGE_RESTRICT'], products) || 0;
         const productName = get([productId, 'SPOKEN_NAME'], products);
+        productImageUrl = get([productId, 'IMAGE'], products);
+        productDetails = get([productId, 'DETAILS'], products).join(', ');
+        cardTitle = productName;
+
         if (minAge == 0) {
             speechOutput = `there is no age restriction for ${productName}`;
         } else {
@@ -425,12 +451,15 @@ function handleAgeRestrictionIntent(intent, session, callback) {
         }
     }
     
-    callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));    
+    const card = buildCard(cardTitle, productDetails, productImageUrl)
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false)); 
 }
 
 function handleGetReviewsIntent(intent, session, callback) {
-    const cardTitle = intent.name;
+    let cardTitle = 'Anonybus';
     let sessionAttributes = {};
+    let productImageUrl = ''
+    let productDetails = ''
     
     const productSlot = intent.slots.Product;
     let repromptText = "Please ask a question.";
@@ -440,6 +469,9 @@ function handleGetReviewsIntent(intent, session, callback) {
         const productId = getResolutionIdFromSlot(productSlot);
         const productName = getResolutionNameFromSlot(productSlot);
         let productReviews = get([productId, 'REVIEWS'], products)
+        productImageUrl = get([productId, 'IMAGE'], products);
+        productDetails = get([productId, 'DETAILS'], products).join(', ');
+        cardTitle = productName;
 
         if (productReviews) {
             
@@ -451,12 +483,15 @@ function handleGetReviewsIntent(intent, session, callback) {
         }
     }
 
-    callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));
+    const card = buildCard(cardTitle, productDetails, productImageUrl)
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false)); 
 }
 
 function handleGetProductDetailsIntent(intent, session, callback) {
-    const cardTitle = intent.name;
+    let cardTitle = 'Anonybus';
     let sessionAttributes = {};
+    let productImageUrl = ''
+    let productDetails = ''
     
     const productSlot = intent.slots.Product;
     let repromptText = "Please ask a question.";
@@ -466,6 +501,9 @@ function handleGetProductDetailsIntent(intent, session, callback) {
         const productId = getResolutionIdFromSlot(productSlot);
         const productName = getResolutionNameFromSlot(productSlot);
         const productDetails = get([productId, 'DETAILS'], products)
+        productImageUrl = get([productId, 'IMAGE'], products);
+        productDetails = get([productId, 'DETAILS'], products).join(', ');
+        cardTitle = productName;
 
         if (productDetails) {
           speechOutput = `${productDetails.join(' ')}.`;
@@ -474,19 +512,27 @@ function handleGetProductDetailsIntent(intent, session, callback) {
         }
     }
 
-    callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));
+    const card = buildCard(cardTitle, productDetails, productImageUrl)
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false)); 
 }
 
 function handleKillMeIntent(intent, session, callback) {
-    const cardTitle = intent.name;
+    let cardTitle = 'Anonybus';
     let sessionAttributes = {};
+    let productImageUrl = ''
+    let productDetails = ''
+
     const productSlot = intent.slots.Product;
     let repromptText = "Please ask a question.";
     let speechOutput = "";
 
     if (productSlot) {
         const productId = getResolutionIdFromSlot(productSlot);
+        const productName = getResolutionNameFromSlot(productSlot);
         const answer = killMeQA[productId];
+        productImageUrl = get([productId, 'IMAGE'], products);
+        productDetails = get([productId, 'DETAILS'], products).join(', ');
+        cardTitle = productName;
 
         if (answer) {
             speechOutput = answer
@@ -495,7 +541,8 @@ function handleKillMeIntent(intent, session, callback) {
         }
     }
 
-    callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));
+    const card = buildCard(cardTitle, productDetails, productImageUrl)
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false)); 
 }
 
 // --------------- Events -----------------------
@@ -574,6 +621,9 @@ function handleFallbackRequest(intent, session, callback) {
     let repromptText = "Please ask a question.";
     let speechOutput = "I'm not sure what you are asking for.";
     
+    const card = buildCard(cardTitle, speechOutput, '');
+    callback(sessionAttributes,
+        buildSpeechletResponse(card, speechOutput, repromptText, false));
     callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, false));
 }
 
@@ -682,4 +732,31 @@ function isStringInText(string, text) {
     }
 }
 
+function toTitleCase(phrase) {
+    return phrase
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+}
 
+function buildCard(title, content, imageUrl) {
+    title = toTitleCase(title)
+
+    if (imageUrl) {
+        return {
+            type: 'Standard',
+            title: title,
+            text: content,
+            image: {
+                "smallImageUrl": imageUrl,
+                "largeImageUrl": imageUrl
+            }
+        }
+    } else {
+        return {
+            type: 'Simple',
+            title: title,
+            content: content,
+        }
+    }
+}
