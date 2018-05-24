@@ -500,13 +500,13 @@ function handleGetProductDetailsIntent(intent, session, callback) {
     if (productSlot) {
         const productId = getResolutionIdFromSlot(productSlot);
         const productName = getResolutionNameFromSlot(productSlot);
-        const productDetails = get([productId, 'DETAILS'], products)
+        const productDetailsList = get([productId, 'DETAILS'], products)
         productImageUrl = get([productId, 'IMAGE'], products);
         productDetails = get([productId, 'DETAILS'], products).join(', ');
         cardTitle = productName;
 
-        if (productDetails) {
-          speechOutput = `${productDetails.join(' ')}.`;
+        if (productDetailsList) {
+          speechOutput = `${productDetailsList.join(' ')}.`;
         } else {
           speechOutput = `I don't have information on ${productName}.`
         }
