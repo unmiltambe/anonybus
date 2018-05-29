@@ -203,8 +203,7 @@ function getWelcomeResponse(callback) {
     // If we wanted to initialize the session to have some attributes we could add those here.
     const sessionAttributes = {};
     const cardTitle = 'Anonybus';
-    const speechOutput = 'Welcome to Anonybus. ' +
-        'Please ask me a question you have about any Amazon product.';
+    const speechOutput = 'Welcome to Anonybus. Ask me a question about any Amazon product.';
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     const repromptText = 'Please ask me a question you have about any Amazon product. For example ' +
@@ -370,7 +369,9 @@ function handleCanProductIntent(intent, session, callback) {
                 speechOutput = "Yes.";
             } else if (productId == 'ECHO_DOT') {
                 // Find feature in another product of same category
-                productDetailsList = get(['ECHO_SHOW', 'DETAILS'], products);
+                var otherProductId = 'ECHO_SHOW';
+                var otherProductName = 'Echo Show';
+                productDetailsList = get([otherProductId, 'DETAILS'], products);
                 var featureDetails = null;
                 if (featureValue && productDetailsList.length > 0) {
                     featureDetails = findFeatureInDetails(featureValue, productDetailsList);
@@ -379,6 +380,12 @@ function handleCanProductIntent(intent, session, callback) {
                 if (featureDetails) {
                     speechOutput = "No, but here's something I found on the Echo Show. ";
                     speechOutput += featureDetails;
+                    
+                    // Update the card
+                    cardTitle = otherProductName;
+                    productDetails = get([otherProductId, 'DETAILS'], products).join(', ');
+                    productImageUrl = get([otherProductId, 'IMAGE'], products);
+                    
                 } else {
                     speechOutput = "No.";
                 }
