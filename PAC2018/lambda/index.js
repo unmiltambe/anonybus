@@ -349,12 +349,13 @@ function handleCanProductIntent(intent, session, callback) {
         if (productId && (productId in products)) {
             productDetailsList = get([productId, 'DETAILS'], products);
 
+            // Find feature in product details
             var featureDetails = null;
             if (featureValue && productDetailsList.length > 0) {
                 featureDetails = findFeatureInDetails(featureValue, productDetailsList);
             }
 
-
+            // Find feature in customer QA's
             productCustomerQAList = get([productId, 'CUSTOMERQAS'], products);
             var customerAnswer = null;
             if (productCustomerQAList.length > 0) {
@@ -365,8 +366,23 @@ function handleCanProductIntent(intent, session, callback) {
                 speechOutput = featureDetails;
             } else if (customerAnswer) {
                 speechOutput = customerAnswer;
-            } else if (productHasFeature(productId, featureId)){
+            } else if (productHasFeature(productId, featureId)) {
                 speechOutput = "Yes.";
+            } else if (productId == 'ECHO_DOT') {
+                // Find feature in another product of same category
+                productDetailsList = get(['ECHO_SHOW', 'DETAILS'], products);
+                var featureDetails = null;
+                if (featureValue && productDetailsList.length > 0) {
+                    featureDetails = findFeatureInDetails(featureValue, productDetailsList);
+                }
+                
+                if (featureDetails) {
+                    speechOutput = "No, but here's something I found on the Echo Show. ";
+                    speechOutput += featureDetails;
+                } else {
+                    speechOutput = "No.";
+                }
+                
             } else {
                 speechOutput = "No.";
             }
