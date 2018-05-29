@@ -560,12 +560,13 @@ function handleNoIntent(intent, session, callback) {
 }
 
 function handleYesIntent(intent, session, callback) {
-
-
     let sessionAttributes = {};
     let speechOutput = "";
     let repromptText = null;
-    let card = null;
+    let cardTitle = 'Anonybus';
+    let productImageUrl = '';
+    let productDetailsStr = '';
+
     let keepSessionAttributes = true;
 
     let productId = null;
@@ -577,6 +578,7 @@ function handleYesIntent(intent, session, callback) {
     if (productId) {
         const productName = get([productId, 'SPOKEN_NAME'], products);
         const productDetails = get([productId, 'DETAILS'], products);
+
         if (index > 0  && index < productDetails.length - 1) {
             speechOutput = productDetails[index] + ". Should I continue to read?";
         } else if (index > 0 && index == productDetails.length - 1) {
@@ -589,10 +591,15 @@ function handleYesIntent(intent, session, callback) {
             sessionAttributes[SESSION_PRODUCT] = productId;
             sessionAttributes[SESSION_INDEX] = index + 1;
         }
+        // card
+        productDetailsStr = productDetails.join(', ');
+        cardTitle = productName;
+        productImageUrl = get([productId, 'IMAGE'], products);
     } else {
         getWelcomeResponse(callback);
     }
 
+    const card = buildCard(cardTitle, productDetailsStr, productImageUrl)
     callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
 }
 
