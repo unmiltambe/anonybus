@@ -21,7 +21,7 @@ const products = {
     'FEATURES': ['WALKIE_TALKIE', 'HANDS_FREE', 'BLUETOOTH'],
     'IMAGE': 'https://images-na.ssl-images-amazon.com/images/I/61dFyj4ZXLL._SX679_.jpg',
     'DETAILS': [
-        "Echo Dot is a hands-free, voice-controlled device that uses Alexa to play music, control smart home devices, make calls, send and receive messages, provide information, read the news, set music alarms, read audiobooks from Audible, control Amazon Video on Fire TV, and more",
+        "Echo Dot is a hands-free, voice-controlled device that uses Alexa to play music, control smart home devices, make calls, send and receive messages, provide information, read the news, set music alarms, read audiobooks from Audible, control Amazon Video on Fire TV, and more. ",
         "Echo Dot connects to speakers or headphones through Bluetooth or 3.5 mm stereo cable to play music from Amazon Music, Spotify, Pandora, iHeartRadio, and TuneIn. Play music simultaneously across Echo devices and speakers connected via cable with multi-room music.",
         "Call or message almost anyone hands-free with your Echo device. Also, instantly connect to other Echo devices in your home using just your voice.",
         "Echo Dot controls lights, fans, TVs, switches, thermostats, garage doors, sprinklers, locks, and more with compatible connected devices from WeMo, Philips Hue, Sony, Samsung SmartThings, Nest, and others",
@@ -43,13 +43,13 @@ const products = {
       "My brother Robert who has been bed ridden and paralyzed with Multiple Sclerosis from his neck down for more than 30 years now has a new friend named Alexa! He was in tears with happiness when Alexa played 70's music, played Jeopardy, answered all his questions and wakes him up every morning. Thank you Amazon for giving my brother a new bedside companion.",
       "Having worked in the electronics retail industry for years now, I've seen scores of Smart devices come and go. Until now, nobody quite got it right. In the Echo Dot, Amazon has created a near perfect blend of hardware and software. I've seen plenty of the former, but truly seamless multi platform software has eluded everyone but Amazon. We're talking major players like Samsung and Google who have been at it for much longer than Amazon. The main problem is that excellent products like the Samsung Smart Things hub, which do a fantastic job of unifying a slew of different connected devices from different companies (Nest, Honeywell, Phillips, and so on), still lacked the web connectivity and entertainment support I wanted, so I'd still end up needing my tablet or phone. Thanks to fantastic third party support, the Dot has no problem controlling all of my smart stuff while allowing me to listen to music, order food, check the weather, listen to the radio, set alarms and timers, all of which is easily accomplished through simple voice commands. To me, this is the exceedingly rare product that I didn't know I needed, and now can't live without. Similar to the smartphone and tablet I use every day that didn't exist just a few short years ago."
     ]
-  }, 
+  },
   'ECHO_SHOW': {
     'COLORS': ['black'],
     'PRICE': 229.99,
     'RATING': 4,
     'FEATURES': ['WALKIE_TALKIE', 'HANDS_FREE', 'BLUETOOTH', 'MONITOR'],
-    'IMAGE': 'https://images-na.ssl-images-amazon.com/images/I/61PTTzQ3aPL._SX679_.jpg',    
+    'IMAGE': 'https://images-na.ssl-images-amazon.com/images/I/61PTTzQ3aPL._SX679_.jpg',
     'SPOKEN_NAME': 'echo show',
     'DETAILS': [
         "Echo Show brings you everything you love about Alexa, and now she can show you things. Watch video flash briefings, Amazon Video content, see music lyrics, security cameras, photos, weather forecasts, to-do and shopping lists, browse and listen to Audible audiobooks, and more. All hands-free—just ask.",
@@ -76,7 +76,7 @@ const products = {
     "REVIEWS":[
       "I know that many media folks have stated that the \"Drop-in\" feature of the Echos is \"creepy\" and can see their point. Here's a different perspective. Mom is now almost 95 and she has short term memory dementia, she's in great spirits but I really can't teach her anything technical, like dialing a phone or even pressing a memory dial button. She lives near my sister and is 2 hours away so visiting is always a bit of a project. I thought I'd try setting a Show next to her rocking chair. I can now \"Drop-in\" on her every day and share some face time with her, visit with her grand daughter, see the dog whom she LOVES, and just make her smile. The beauty is that there is no interaction needed on her end, the Caregivers and my Mom love this setup. The fact that I can use my phone from anywhere and actually see and talk to Mom, and show her things is hugely entertaining and comforting for Mom, and everyone in the family. So I say with extreme gratitude, Thank You Amazon for creating an amazingly personally helpful tool for the elderly. The only bug I have at the moment, \"Alexa, turn off the screen\", the screen turns off, then immediately turns back on. Tell her again and the screen stays off, pretty consistent bug. Edit- Seems fixed now! 1/06/2018 Still enjoying my Echo Shows very much, I don't expect this to replace a tablet, it does many things very well, besides being indispensable with visiting Mom. Currently there is one in the Kitchen and it is used by the family to play lots of music, having the screen is really nice to be able to see what's playing etc. We are trying Amazon Music and so far it's pretty sweet as well, \"Alexa show me all albums from Keith Urban\", up comes pictures of all of his 12 or so album covers, touch one and play the album. Alexa, \"Connect Bluetooth\" and the Show connects to a Bluetooth receiver I have on our whole house stereo. Alexa \"Turn on the Stereo\", Alexa controls the Logitech Harmony remote to power up the stereo and now we are hearing music everywhere, nice. We've also added some Ring cameras and doorbell, \"Alexa, show me the front door\", now I'm looking out front. Oh, and our doggie monitor/treat shooter, Furbo, \"Alexa, ask Furbo to toss a treat\" is our dog \"Cookie\" 's favorite skill! Bottom line, this is a very powerful system, don't get me wrong we love our Apple products (Phones, iPads, and Macs) but I prefer this Amazon ecosystem for my home music, automation, and general questions etc. as it's a fairly open system that plays well with 3rd parties when compared to the likes of Apple. I would never have imagined all that is possible with these units!",
       "So first off, let me start by saying, my family and I are all Apple everything. MacBook’s, Apple TVs, Watches, all iPhones, etc. You name it. We use it. But once I saw that the Echo Show had a screen I was so GAME, this was also after the HomePod from Apple was released (no screen). I wanted to try it out so badly, I have a few regular speakers but never bought a home smart speaker before, so this was entirely and completely new for me, and let me tell you, so far so GOOD. Just like Apple, the packaging was very nice, lots to open and unwrap, all clean and dust free. The set up was okay, it took a while but my Wi-Fi is not the best so It could have just been personal reasons. And once it turned on I was like, “uhhhh what do I do now”. It was just a screen and nothing really happened besides a little video beforehand on what it can do. I started to ask it questions and downloaded different skills and what not and it became easier to use. The quality of the audio is amazing, it gets very loud stays very clear. The 7in screen is also very high definition, as well as the 5MP front camera. I then downloaded the Alexa app and video chatted some people which was so awesome to do so in the kitchen as I was just cooking and cleaning, etc. It felt very futuristic. Now if you’re looking for something mind-blowing and life changing this is not for you. This is a massive step for the Echo devices and I am very happy to own one. It’s enjoyable and easy to use. The more skills you download the more I found out it can do so much more than I really thought. I like the news apps and the sound making apps. Aesthetically speaking it looks so sweet, clean and futuristic just sitting in my kitchen with the home screen always on and ready to be talked to. And I probably love that the most. Just a little \"smart-home-TV-speaker\" just chilling in my kitchen. This device and future ones have so much potential in the home and can really change the way we live. I really enjoy being an early adopter of technology to see which direction we are headed in and this is a great start. Amazon is seriously killing the game and I am so excited for their future! Another PLEASED customer!!"
-    ]     
+    ]
   },
   'KIND_BAR': {
     'FLAVORS': ['dark chocolate nuts and sea salt'],
@@ -84,17 +84,16 @@ const products = {
     'RATING': 5,
     'SIZE': [12],
     'SPOKEN_NAME': 'kind bars',
-    'IMAGE': 'https://images-na.ssl-images-amazon.com/images/I/91qfuTTLL4L._SL1500_.jpg', 
+    'IMAGE': 'https://images-na.ssl-images-amazon.com/images/I/91qfuTTLL4L._SL1500_.jpg',
     'DETAILS': [
-        "Contains 12 - 1.4oz KIND Bars",
+        "Contains 12 - 1.4oz KIND Bars. ",
         "Our best-selling bar is a simple blend of Brazilian sea salt sprinkled over whole nuts and drizzled with dark chocolate.",
         "With 5g of sugar, it's a satisfying, nutty snack that only seems indulgent.",
-        "Gluten free, Non GMO, 0g Trans Fat, Kosher",
-        "Low glycemic index, low sodium, good source of fiber",
-        "Sweet and salty blend of almonds, peanuts, and walnuts drizzled in chocolate with a touch of sea salt",
-        "Provides all natural protein, fiber and only 5g of sugar",
-        "Finely crafted from the highest quality whole nuts and nature's most delicious spices",
-        "KIND is a brand of delicious, natural, healthful foods made from wholesome ingredients you can see & pronounce"
+        "Gluten free, Non GMO, 0g Trans Fat, Kosher, Low glycemic index, low sodium, good source of fiber. ",
+        "Sweet and salty blend of almonds, peanuts, and walnuts drizzled in chocolate with a touch of sea salt. ",
+        "Provides all natural protein, fiber and only 5g of sugar.",
+        "Finely crafted from the highest quality whole nuts and nature's most delicious spices.",
+        "KIND is a brand of delicious, natural, healthful foods made from wholesome ingredients you can see and pronounce."
     ],
     'CUSTOMERQAS':[{
         'QUESTION':"How much protein in the Peanut Butter and Dark Chocolate?",
@@ -113,7 +112,7 @@ const products = {
     'PRICE': 48.75,
     'RATING': 5,
     'SPOKEN_NAME': 'super mario odyssey',
-    'IMAGE': 'https://images-na.ssl-images-amazon.com/images/I/51cE%2B9FaiWL.jpg', 
+    'IMAGE': 'https://images-na.ssl-images-amazon.com/images/I/51cE%2B9FaiWL.jpg',
     'DETAILS': [
         "Explore huge 3D kingdoms filled with secrets and surprises, including costumes for Mario and lots of ways to interact with the diverse environments - such as cruising around them in vehicles that incorporate the HD Rumble feature of the Joy-Con controller or exploring sections as Pixel Mario.",
         "Thanks to his new friend, Cappy, Mario has brand-new moves for you to master, like cap throw, cap jump and capture. With capture, Mario can take control of all sorts of things, including objects and enemies!",
@@ -155,6 +154,9 @@ const killMeQA = {
     'KIND_BAR': "On the contrary, you won't starve to death",
     'SUPER_MARIO_ODYSSEY': 'Not if you eat your magic mushrooms',
 }
+
+const SESSION_INDEX = 'index';
+const SESSION_PRODUCT = 'product';
 
 // --------------- Helpers that build all of the responses -----------------------
 
@@ -232,7 +234,7 @@ function handleGetProductAttributesIntent(intent, session, callback) {
     let sessionAttributes = {};
     let productImageUrl = ''
     let productDetails = ''
-    
+
     const productSlot = intent.slots.Product;
     const productAttributeSlot = intent.slots.ProductAttribute;
     let repromptText = "Please ask a question.";
@@ -247,12 +249,12 @@ function handleGetProductAttributesIntent(intent, session, callback) {
         productImageUrl = get([productId, 'IMAGE'], products);
         productDetails = get([productId, 'DETAILS'], products).join(', ');
         cardTitle = productName;
-        
+
         if (attributeValues) {
             if (!(attributeValues instanceof Array)) {
                 attributeValues = [attributeValues]
             }
-            
+
             if (attributeValues.length > 1) {
                 speechOutput = `${productName} has the following ${attributeName}: ${attributeValues.join(', ')}.`;
             } else {
@@ -272,12 +274,12 @@ function handleCompareProductsInCategoryIntent(intent, session, callback) {
     let sessionAttributes = {};
     let productImageUrl = ''
     let productDetails = ''
-    
+
     const comparatorSlot = intent.slots.Comparator;
     const productCategorySlot = intent.slots.ProductCategory;
     let repromptText = "Please ask a question.";
     let speechOutput = "I don't support this comparison currently.";
-    
+
     if (comparatorSlot && productCategorySlot) {
         const comparatorId = getResolutionIdFromSlot(comparatorSlot);
         const categoryId = getResolutionIdFromSlot(productCategorySlot);
@@ -301,7 +303,7 @@ function handleCompareProductsInCategoryIntent(intent, session, callback) {
                 return products[p1]['RATING'] > products[p2]['RATING'] ? p1 : p2;
             });
         }
-        
+
         if (productId && comparatorId) {
             const productName = get([productId, 'SPOKEN_NAME'], products);
             const comparatorName = getResolutionNameFromSlot(comparatorSlot);
@@ -327,12 +329,12 @@ function handleCanProductIntent(intent, session, callback) {
     let sessionAttributes = {};
     let productImageUrl = ''
     let productDetails = ''
-    
+
     const productSlot = intent.slots.Product;
     const productFeatureSlot = intent.slots.ProductFeature;
     let repromptText = "Please ask a question.";
     let speechOutput = "I'm not sure what you are asking for.";
-    
+
     if (productSlot && productFeatureSlot) {
         const productId = getResolutionIdFromSlot(productSlot);
         const productName = getResolutionNameFromSlot(productSlot);
@@ -352,7 +354,7 @@ function handleCanProductIntent(intent, session, callback) {
                 featureDetails = findFeatureInDetails(featureValue, productDetailsList);
             }
 
-            
+
             productCustomerQAList = get([productId, 'CUSTOMERQAS'], products);
             var customerAnswer = null;
             if (productCustomerQAList.length > 0) {
@@ -364,7 +366,7 @@ function handleCanProductIntent(intent, session, callback) {
             } else if (customerAnswer) {
                 speechOutput = customerAnswer;
             } else if (productHasFeature(productId, featureId)){
-                speechOutput = "Yes.";    
+                speechOutput = "Yes.";
             } else {
                 speechOutput = "No.";
             }
@@ -380,13 +382,13 @@ function handleCanProductIntent(intent, session, callback) {
 function handleProductDifferenceIntent(intent, session, callback) {
     let cardTitle = 'Anonybus';
     let sessionAttributes = {};
-    
+
     const productOneSlot = intent.slots.ProductOne;
     const productTwoSlot = intent.slots.ProductTwo;
 
     let repromptText = "Please ask a question.";
     let speechOutput = "I'm not sure what you are asking for.";
-    
+
     const productId1 = getResolutionIdFromSlot(productOneSlot);
     const productId2 = getResolutionIdFromSlot(productTwoSlot);
 
@@ -402,11 +404,11 @@ function handleProductDifferenceIntent(intent, session, callback) {
 function handleCustomerQAIntent(intent, session, callback) {
     let cardTitle = 'Anonybus';
     let sessionAttributes = {};
-    
+
     const questionSlot = intent.slots.GenericQuestion;
     let repromptText = "Please ask a question.";
     let speechOutput = "I'm not sure what you are asking for.";
-    
+
     if (questionSlot) {
         const question = questionSlot.value;
         const answer = customerQA[question];
@@ -426,14 +428,14 @@ function handleAgeRestrictionIntent(intent, session, callback) {
     let sessionAttributes = session.attributes || {};
     let productImageUrl = ''
     let productDetails = ''
-    
+
     const actionSlot = intent.slots.Action;
     const productSlot = intent.slots.Product;
     const personSlot = intent.slots.Person;
     const ageSlot = intent.slots.Age;
     let repromptText = "Please ask a question.";
     let speechOutput = "I'm not sure what you are asking for.";
-    
+
      if (productSlot) {
         const productId = getResolutionIdFromSlot(productSlot);
         const actionName = getResolutionNameFromSlot(actionSlot);
@@ -450,9 +452,9 @@ function handleAgeRestrictionIntent(intent, session, callback) {
             speechOutput = `${productName} is recommended for ages ${minAge} and above`;
         }
     }
-    
+
     const card = buildCard(cardTitle, productDetails, productImageUrl)
-    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false)); 
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
 }
 
 function handleGetReviewsIntent(intent, session, callback) {
@@ -460,7 +462,7 @@ function handleGetReviewsIntent(intent, session, callback) {
     let sessionAttributes = {};
     let productImageUrl = ''
     let productDetails = ''
-    
+
     const productSlot = intent.slots.Product;
     let repromptText = "Please ask a question.";
     let speechOutput = 'I did not find any reviews for the product.';
@@ -474,25 +476,24 @@ function handleGetReviewsIntent(intent, session, callback) {
         cardTitle = productName;
 
         if (productReviews) {
-            
+
             // Randomize the list
             productReviews = productReviews.sort((a,b) => 0.5-Math.random())
-            
+
             speechOutput = "Here are some reviews for this product. One customer says, "
             speechOutput += `${productReviews.join('. Another customer says, ')}.`;
         }
     }
 
     const card = buildCard(cardTitle, productDetails, productImageUrl)
-    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false)); 
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
 }
 
 function handleGetProductDetailsIntent(intent, session, callback) {
     let cardTitle = 'Anonybus';
     let sessionAttributes = {};
-    let productImageUrl = ''
-    let productDetails = ''
-    
+    let productImageUrl = '';
+    let productDetails = '';
     const productSlot = intent.slots.Product;
     let repromptText = "Please ask a question.";
     let speechOutput = "I'm not sure what product you are referring to.";
@@ -501,19 +502,24 @@ function handleGetProductDetailsIntent(intent, session, callback) {
         const productId = getResolutionIdFromSlot(productSlot);
         const productName = getResolutionNameFromSlot(productSlot);
         const productDetailsList = get([productId, 'DETAILS'], products)
+
         productImageUrl = get([productId, 'IMAGE'], products);
         productDetails = get([productId, 'DETAILS'], products).join(', ');
         cardTitle = productName;
 
+
         if (productDetailsList) {
-          speechOutput = `${productDetailsList.join(' ')}.`;
+            speechOutput = `${productDetailsList[0]}` + ' Should I continue?';
+            // store the product and the index
+            sessionAttributes[SESSION_PRODUCT] = productId;
+            sessionAttributes[SESSION_INDEX] = 1;
         } else {
           speechOutput = `I don't have information on ${productName}.`
         }
     }
 
     const card = buildCard(cardTitle, productDetails, productImageUrl)
-    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false)); 
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
 }
 
 function handleKillMeIntent(intent, session, callback) {
@@ -542,7 +548,52 @@ function handleKillMeIntent(intent, session, callback) {
     }
 
     const card = buildCard(cardTitle, productDetails, productImageUrl)
-    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false)); 
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
+}
+
+function handleNoIntent(intent, session, callback) {
+    let speechOutput = "Alright."
+    let repromptText = null;
+    let card = null;
+    let sessionAttributes = {};
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
+}
+
+function handleYesIntent(intent, session, callback) {
+
+
+    let sessionAttributes = {};
+    let speechOutput = "";
+    let repromptText = null;
+    let card = null;
+    let keepSessionAttributes = true;
+
+    let productId = null;
+    let index = 0;
+    if (session.attributes) {
+        productId = session.attributes[SESSION_PRODUCT];
+        index = session.attributes[SESSION_INDEX];
+    }
+    if (productId) {
+        const productName = get([productId, 'SPOKEN_NAME'], products);
+        const productDetails = get([productId, 'DETAILS'], products);
+        if (index > 0  && index < productDetails.length - 1) {
+            speechOutput = productDetails[index] + ". Should I continue to read?";
+        } else if (index > 0 && index == productDetails.length - 1) {
+            speechOutput = productDetails[index];
+        } else {
+            speechOutput = "there is no more details for this product. Please ask a product question.";
+            keepSessionAttributes = false;
+        }
+        if(keepSessionAttributes) {
+            sessionAttributes[SESSION_PRODUCT] = productId;
+            sessionAttributes[SESSION_INDEX] = index + 1;
+        }
+    } else {
+        getWelcomeResponse(callback);
+    }
+
+    callback(sessionAttributes, buildSpeechletResponse(card, speechOutput, repromptText, false));
 }
 
 // --------------- Events -----------------------
@@ -598,6 +649,10 @@ function onIntent(intentRequest, session, callback) {
         getWelcomeResponse(callback);
     } else if (intentName === 'AMAZON.StopIntent' || intentName === 'AMAZON.CancelIntent') {
         handleSessionEndRequest(callback);
+    } else if(intentName === 'AMAZON.YesIntent') {
+        handleYesIntent(intent, session, callback);
+    } else if(intentName === 'AMAZON.NoIntent') {
+        handleNoIntent(intent, session, callback);
     } else {
         throw new Error('Invalid intent');
     }
@@ -620,7 +675,7 @@ function handleFallbackRequest(intent, session, callback) {
     const sessionAttributes = {};
     let repromptText = "Please ask a question.";
     let speechOutput = "I'm not sure what you are asking for.";
-    
+
     const card = buildCard(cardTitle, speechOutput, '');
     callback(sessionAttributes,
         buildSpeechletResponse(card, speechOutput, repromptText, false));
